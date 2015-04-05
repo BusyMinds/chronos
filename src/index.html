@@ -2,7 +2,7 @@
 <html ng-app="chronos">
   <head>
     <meta charset="utf-8">
-    <title>chronos</title>
+    <title>Chronos Timetabling Tools</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -24,8 +24,26 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div class="container">
+      <div ng-include="'components/navbar/navbar.html'"></div>
+      <div class="row">
+        <div class="col-md-8">
+          <div ng-include="'components/pages/pages.html'"></div>
+          <div ng-view></div>
+        </div>
+        <div class="col-md-4">
+          <div ng-include="'components/aside/aside.html'"></div>
+        </div>
+      </div>
+      <div ng-include="'components/parameters/parameters.html'"></div>
 
-    <div ng-view></div>
+      <hr>
+
+      <div class="footer">
+        <p>With ♥ from <a href="https://busymindsdigital.com/">BusyMinds Digital</a></p>
+      </div>
+
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

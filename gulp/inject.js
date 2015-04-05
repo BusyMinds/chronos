@@ -28,7 +28,7 @@ module.exports = function(options) {
 
     var wiredepOptions = {
       directory: 'bower_components',
-      exclude: [/bootstrap\.css/]
+      exclude: [/bootstrap\.css/, 'ng-tags-input.css', 'ng-tags-input.min.css']
     };
 
     return gulp.src(options.src + '/*.html')
