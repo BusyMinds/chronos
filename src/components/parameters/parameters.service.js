@@ -2,7 +2,7 @@
 
 function Parameters() {
   var data = {
-    name: '',
+    title: '',
     days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     timePeriods: [],
     subjects: [],

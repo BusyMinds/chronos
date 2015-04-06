@@ -26,17 +26,8 @@
     <![endif]-->
     <div class="container">
       <div ng-include="'components/navbar/navbar.html'"></div>
-      <div class="row">
-        <div class="col-md-8">
-          <div ng-include="'components/pages/pages.html'"></div>
-          <div ng-view></div>
-        </div>
-        <div class="col-md-4">
-          <div ng-include="'components/aside/aside.html'"></div>
-        </div>
-      </div>
+      <div ng-view></div>
       <div ng-include="'components/parameters/parameters.html'"></div>
-
       <hr>
 
       <div class="footer">

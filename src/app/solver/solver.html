@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-12">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>General Information</legend>
+        <div class="form-group">
+          <label for="inputTitle" class="col-sm-3 control-label">Title</label>
+          <div class="col-sm-9">
+            <input type="text" ng-model="solver.title" class="form-control" id="inputTitle" placeholder="Name your timetable." required>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <form ng-submit="solver.addNewDay(solver.newDay)">
+      <fieldset>
+        <legend>Days</legend>
+        <input type="text" ng-model="solver.newDay" class="form-control" placeholder="Add a new day." required>
+        <span class="help-block">Press <kbd>Enter</kbd> to add a new item.</span>
+        <div class="panel panel-default" ng-if="solver.days">
+          <div class="panel-heading">Days</div>
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="day in solver.days track by $index">
+              {{day}}
+              <span class="text-muted"><i class="glyphicon glyphicon-remove"></i></span>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <form ng-submit="solver.addNewTimePeriod(solver.newTimePeriod)">
+      <fieldset>
+        <legend>Hours</legend>
+        <input type="text" ng-model="solver.newTimePeriod" class="form-control" placeholder="Add a new time period." required>
+        <span class="help-block">Press <kbd>Enter</kbd> to add a new item.</span>
+        <div class="panel panel-default" ng-if="solver.timePeriods.length > 0">
+          <div class="panel-heading">Time Periods</div>
+          <ul class="list-group">
+            <li class="list-group-item" ng-repeat="period in solver.timePeriods">{{period}}</li>
+          </ul>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

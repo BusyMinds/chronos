@@ -57,13 +57,8 @@ $border-radius-small: 0px;
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/responsive-utilities";
 
-// ng-tags-input
-@import "../../bower_components/ng-tags-input/ng-tags-input.min.css";
-@import "../../bower_components/ng-tags-input/ng-tags-input.bootstrap.min.css";
-
 * {
   -webkit-border-radius: 0 !important;
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
 }
-
